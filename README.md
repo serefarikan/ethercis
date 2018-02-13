@@ -69,7 +69,7 @@ After you install the third party libraries, the first thing you need to do is t
 
 Installation instructions in the Ethercis installer package TODO: GIVE LINK explain how you can install postgresql and required extensions. For the purposes of development, it is recommended that you use [Docker](https://www.docker.com/).  If you want to build a docker image locally, that is, use a dockerfile to cook the image on your own, the dockerfile used by this code base is under examples/docker-development-db Make sure you read the readme under that directory.
 If you don't want to use the dockerfile and build the image on your machine, you can use a previously build image (based on the dockerfile referenced above).  To use this pre-build image, all you have to do is run the docker run command. For example, the following command starts an ephemeral container of this image:
-`docker run -d -it --rm  --name="pg-ethercis" -e POSTGRES_PASSWORD=postgres -p 5432:5432 serefarikan/ethercis-pg:v1`
+`docker run -it --rm  --name="pg-ethercis" -e POSTGRES_PASSWORD=postgres -p 5432:5432 serefarikan/ethercis-pg:v1`
 you can stop this container by `docker stop pg-ethercis`
 *(WARNING: Make sure that you read the note about docker at the end of this document)*
 
