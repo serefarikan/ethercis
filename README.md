@@ -33,7 +33,7 @@ Development on Ethercis requires the following:
 The build instructions below have been tested on Ubuntu 16.04 with Java 8 and maven 3.3.9. Docker version: 17.05.0-ce. 
 
 #### Install third party libraries
-Ethercis makes use of third party libraries which must be installed to your local maven repository for the code to compile and run. In order to install these libraries you can either run the install_3rd_party_jars.sh script or run the following commands which is the content of this script:
+Ethercis makes use of third party libraries which must be installed to your local maven repository for the code to compile and run. In order to install these libraries you can either run the install_3rd_party_jars.sh (**you must run this script from the ehrservice folder** so change directory to that folder, then runt it) script or run the following commands which is the content of this script:
 
 ```
 cd ehrservice/libraries
