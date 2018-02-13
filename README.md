@@ -1,7 +1,7 @@
 ## How to set up a development environment for EtherCis
 
 EtherCIS code base is distributed over two git repositories. [EhrService](https://github.com/ethercis/ehrservice) and [VirtualEhr](https://github.com/ethercis/VirtualEhr)
-EhrService is the core functionality such as database access, validation, knowledge repository functionality (opt files) etc. VirtualEhr is a service layer that sits on top of this core functionality and brings together these core libraries to provide services such as Ehr, Composition etc. VirtualEhr also contains a project with an embedded web server that allows REST API access to these services. Finally, the [ethercis](https://github.com/ethercis/ethercis) repository provides documentation and other artefacts which are not directly code but are relevant to both two other repositories.
+EhrService is the core functionality such as database access, validation, knowledge repository functionality (opt files) etc. VirtualEhr is a service layer that sits on top of this core functionality and brings together these core libraries to provide services such as Ehr, Composition etc. VirtualEhr also contains a project with an embedded web server that allows REST API access to these services. Finally, the [ethercis](https://github.com/ethercis/ethercis) repository provides documentation and other artefacts which are not directly code but are relevant to both two other repositories. **There is an EhrService folder under VirtualEhr repository. This is not a copy of the ehrservice repo or anything like that. This is a component to perform operations on EHRs, so don't get confused if you see it**
 
 ### Directory layout
 It is recommended that you create a development directory which contains three git repositories as follows:
