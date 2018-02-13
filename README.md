@@ -73,7 +73,7 @@ If you don't want to use the dockerfile and build the image on your machine, you
 you can stop this container by `docker stop pg-ethercis`
 *(WARNING: Make sure that you read the note about docker at the end of this document)*
 
-Once the postgresql image is up (you may want to run the command without -d to ensure that postgres started) you must generate the database tables, stored procedures etc. as follows:
+Wait for the postgresql image to start to make sure that you don't try to access the database before it can properly start. Once the postgresql image is up (when it says so in the command line) you must generate the database tables, stored procedures etc. as follows:
 
 ```
 cd ehrservice
