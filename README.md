@@ -80,6 +80,13 @@ cd ehrservice
 ./gradlew db:flywayMigrate
 ```
 
+For Windows:
+
+```
+cd ehrservice
+gradlew.bat db:flywayMigrate
+```
+
 The command above uses [gradle](https://gradle.org/) to run [flyway](https://flywaydb.org/) Gradle is a build tool like maven but it is not needed to build anything in the Ethercis code base. You can think of it as a scripting tool used in this step to easily generate database artefacts. 
 
 #### Install core Ethercis libraries to local maven repository
@@ -104,6 +111,8 @@ The above mvn build makes use of the core libraries installed in the previous st
 cd VirtualEhr/vehr-integration-tests
 mvn integration-test -Dcucumber.options="--glue com.ethercis.vehr src/test/resources/features/RestApiAQL.feature"
 ```
+
+**If you're using Windows or if your OS default encoding is not UTF-8, make sure that you set JAVA_TOOL_OPTIONS environment variable to -Dfile.encoding=UTF-8 before running mvn from terminal/command prompt** This is needed because openEHR operational template files and test data (XML/JSON) may contain chars which can only be consistently represented with UTF-8. Current code base works fine when system default encoding is UTF-8 but the command above fails then run on on OS that does not have UTF-8 as its default encoding. Windows does this unfortunately.
 
 The above mvn command will run a single feature file which will start the embedded server, put some data in and query it using Aql. This is a good round-trip scenario to confirm that your development setup is in place and you're able to run EtherCIS based on the code on your disk.
 
